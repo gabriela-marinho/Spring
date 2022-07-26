@@ -1,1 +1,3 @@
-Ao criar novo projeto, preciso adicionar Diretory depois: src e resources, tudo manualmente
+1.Ao criar novo projeto, preciso adicionar Diretory depois: src e resources, tudo manualmente.
+
+2. Calsse configuration é bom especificar sempre antes do q se trata, web configuration, securiryConfiguration....etc
