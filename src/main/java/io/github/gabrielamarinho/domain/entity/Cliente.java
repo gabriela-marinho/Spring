@@ -10,8 +10,8 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@Table(name = "cliente")
+@Table(name = "CLIENTE")
+@Entity
 public class Cliente  {
 
     @Id
@@ -19,7 +19,7 @@ public class Cliente  {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "descricao")
+    @Column(name = "descricao", length = 100)
     private String descricao;
 
 

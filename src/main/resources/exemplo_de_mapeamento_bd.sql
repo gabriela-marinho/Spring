@@ -1,5 +1,5 @@
 //exemplo de mapeamento de banco de dados,para executar com o jdbcTemplete
-//nome certo do arquivo seria data.
+//nome certo do arquivo seria data.sql
 
 CREATE TABLE CLIENTE (
     ID INTEGER PRIMARY KEY  AUTO_INCREMENT,
