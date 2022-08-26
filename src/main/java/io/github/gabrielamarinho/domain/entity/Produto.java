@@ -5,13 +5,11 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-
 @Getter
 @Setter
 @Entity
-@Table(name = "PRODUTO")
+@Table(name = "produto")
 public class Produto {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -24,4 +22,3 @@ public class Produto {
     private BigDecimal preco;
 
 }
-

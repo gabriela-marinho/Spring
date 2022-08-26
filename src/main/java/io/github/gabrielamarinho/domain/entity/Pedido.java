@@ -11,9 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "PEDIDO")
+@Table(name = "pedido")
 public class Pedido {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -31,4 +30,13 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens;
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "id=" + id +
+                ", dataPedido=" + dataPedido +
+                ", total=" + total +
+                '}';
+    }
 }

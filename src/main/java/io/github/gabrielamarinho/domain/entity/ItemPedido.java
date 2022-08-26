@@ -4,13 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
-@Setter
 @Getter
+@Setter
 @Entity
-@Table(name= "ITEM_PEDIDO")
+@Table(name = "item_pedido")
 public class ItemPedido {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
