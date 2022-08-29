@@ -44,4 +44,11 @@ public class ClienteController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @PutMapping("/update")
+    @ResponseBody
+    public ResponseEntity update( @RequestBody Cliente cliente ,
+                                  @PathVariable Integer id){
+
+    }
 }
