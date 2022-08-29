@@ -14,6 +14,7 @@ import java.util.Set;
 @Setter
 @Table(name = "CLIENTE")
 @Entity
+
 public class Cliente  {
 
     @Id
@@ -28,4 +29,15 @@ public class Cliente  {
     private List<Pedido> pedidos;
 
 
+    public Cliente(Integer id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }
