@@ -3,6 +3,7 @@ package io.github.gabrielamarinho.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,10 +13,10 @@ import java.util.Set;
 
 @Getter
 @Setter
-@Table(name = "CLIENTE")
 @Entity
-
-public class Cliente  {
+@NoArgsConstructor
+@Table( name = "cliente" )
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,9 +27,7 @@ public class Cliente  {
     private String nome;
 
     @OneToMany( mappedBy = "cliente" , fetch = FetchType.LAZY )
-    private List<Pedido> pedidos;
-
-
+    private Set<Pedido> pedidos;
     public Cliente(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
