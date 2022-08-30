@@ -26,6 +26,9 @@ public class Cliente {
     @Column(name = "nome", length = 100)
     private String nome;
 
+    @Column(name="cpf", length = 11)
+    private Integer cpf;
+
     @OneToMany( mappedBy = "cliente" , fetch = FetchType.LAZY )
     private Set<Pedido> pedidos;
     public Cliente(Integer id, String nome) {

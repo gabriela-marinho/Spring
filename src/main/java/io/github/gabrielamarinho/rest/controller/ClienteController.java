@@ -45,10 +45,23 @@ public class ClienteController {
         return ResponseEntity.notFound().build();
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public ResponseEntity update( @RequestBody Cliente cliente ,
                                   @PathVariable Integer id){
-
+            return clientes.findById(id)
+                    .map(clienteExistente -> {
+                        cliente.setId(clienteExistente.getId());
+                        /*
+                        com o .map acima evita precisar setar cada propriedade da entidade como:
+                        cliente.setId(clienteExistente.getId());
+                        cliente.setNome(clienteExistente.getNome());
+                         */
+                        clientes.save(cliente);
+                        return ResponseEntity.noContent().build();
+                    }).orElseGet( () -> ResponseEntity.notFound().build());
     }
+
+    //@GetMapping("buscar")
+
 }
